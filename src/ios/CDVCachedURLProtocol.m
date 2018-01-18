@@ -8,8 +8,9 @@
 
 @implementation CDVCachedURLProtocol
 
-- (void) pluginInitialize(){
-	[NSURLProtocol registerClass:[CachedURLProtocol class]]
+- (void) pluginInitialize
+{
+	[NSURLProtocol registerClass:[CachedURLProtocol class]];
 }
 
 @end
