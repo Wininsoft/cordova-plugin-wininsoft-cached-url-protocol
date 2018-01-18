@@ -16,8 +16,8 @@
         <param name="ios-package" value="CachedUrlProtocol" />
       </feature>
     </config-file>
-    <source-file src="src/ios/TURLSessionProtocol.m" />
-    <header-file src="src/ios/TURLSessionProtocol.h" />
+    <source-file src="src/ios/CachedURLProtocol.m" />
+    <header-file src="src/ios/CachedURLProtocol.h" />
   </platform>
   
 </plugin>
