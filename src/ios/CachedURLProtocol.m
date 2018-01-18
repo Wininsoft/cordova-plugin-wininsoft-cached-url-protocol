@@ -21,7 +21,7 @@ static NSUInteger const KCacheTime = 360;//»º´æµÄÊ±¼ä  Ä¬ÈÏÉèÖÃÎª360Ãë ¿ÉÒÔÈÎÒâµ
 @end
 
 
-@interface CachedURLSessionProtocol ()<NSURLSessionDataDelegate>
+@interface CachedURLProtocol ()<NSURLSessionDataDelegate>
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) NSURLSessionDataTask *downloadTask;
 @property (nonatomic, strong) NSURLResponse *response;
@@ -104,7 +104,7 @@ static NSUInteger const KCacheTime = 360;//»º´æµÄÊ±¼ä  Ä¬ÈÏÉèÖÃÎª360Ãë ¿ÉÒÔÈÎÒâµ
 
 @end
 
-@implementation CachedURLSessionProtocol
+@implementation CachedURLProtocol
 
 + (void)initialize
 {
