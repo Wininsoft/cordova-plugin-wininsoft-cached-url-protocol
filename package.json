@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-wininsoft-cached-url-protocol",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "",
   "cordova": {
     "id": "cordova-plugin-wininsoft-cached-url-protocol",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wininsoft/cordova-plugin-file-opener2.git"
+    "url": "https://github.com/Wininsoft/cordova-plugin-wininsoft-cached-url-protocol.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Wininsoft/cordova-plugin-file-opener2/issues"
+    "url": "https://github.com/Wininsoft/cordova-plugin-wininsoft-cached-url-protocol/issues"
   },
-  "homepage": "https://github.com/Wininsoft/cordova-plugin-file-opener2#readme"
+  "homepage": "https://github.com/Wininsoft/cordova-plugin-wininsoft-cached-url-protocol#readme"
 }
