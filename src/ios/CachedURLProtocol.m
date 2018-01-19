@@ -1,9 +1,8 @@
 #import "CachedURLProtocol.h"
 #import <objc/runtime.h>
 #import <CommonCrypto/CommonDigest.h>
-NSString *const KProtocolHttpHeadKey = @"KProtocolHttpHeadKey";
 
-static NSUInteger const KCacheTime = 360;//»º´æµÄÊ±¼ä  Ä¬ÈÏÉèÖÃÎª360Ãë ¿ÉÒÔÈÎÒâµÄ¸ü¸Ä
+static NSUInteger const KCacheTime = 60*60*24*360;//»º´æµÄÊ±¼ä  Ä¬ÈÏÉèÖÃÎª360Ìì ¿ÉÒÔÈÎÒâµÄ¸ü¸Ä
 
 @interface NSURLRequest(MutableCopyWorkaround)
 - (id)mutableCopyWorkaround;
@@ -190,8 +189,6 @@ static NSUInteger const KCacheTime = 360;//»º´æµÄÊ±¼ä  Ä¬ÈÏÉèÖÃÎª360Ãë ¿ÉÒÔÈÎÒâµ
         NSLog([@"Requesting:" stringByAppendingString:self.request.URL.absoluteString]);
         NSMutableURLRequest *request = [self.request mutableCopyWorkaround];
         request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
-        //        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.request.URL.absoluteString]];
-        [request setValue:@"test" forHTTPHeaderField:KProtocolHttpHeadKey];
         self.downloadTask = [self.session dataTaskWithRequest:request];
         [self.downloadTask resume];
         
