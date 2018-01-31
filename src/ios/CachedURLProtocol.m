@@ -145,15 +145,24 @@ static NSUInteger const KCacheTime = 60*60*24*360;//缓存的时间  默认设置为360天 
         return YES;
     if([request.URL.absoluteString containsString:@"/DataService/GetImageData?"]&&[request.URL.absoluteString containsString:@"&rowVersion="])
         return YES;
+    if([request.URL.absoluteString containsString:@"/DataService/GetImagePathData?"])
+        return YES;
     if([request.URL.absoluteString containsString:@"/DataService/PreviewFile?"]&&[request.URL.absoluteString containsString:@"&rowVersion="])
         return YES;
     if([request.URL.absoluteString containsString:@"/DataService/GetEntity?"]&&[request.URL.absoluteString containsString:@"&rowVersion="])
+        return YES;
+    if([request.URL.absoluteString containsString:@"/DataService/GetFileData?"]&&[request.URL.absoluteString containsString:@"&rowVersion="])
+        return YES;
+    if([request.URL.absoluteString containsString:@"/DataService/GetFilePathData?"])
         return YES;
     if([request.URL.absoluteString containsString:@"/FileService/Thumbnail?"]&&[request.URL.absoluteString containsString:@"&rowVersion="])
         return YES;
     if([request.URL.absoluteString containsString:@"/FileService/Download?"])
         return YES;
-    
+
+    if([request.URL.absoluteString containsString:@"entityType?"]&&[request.URL.absoluteString containsString:@"property?"]&&[request.URL.absoluteString containsString:@"&rowVersion="])
+        return YES;
+
     return NO;
 }
 
